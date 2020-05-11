@@ -14,7 +14,29 @@
  *= require_self
  */
 
- @media all and (max-width: 800px) {
+ @media screen and (min-width: 801px) {
+   .nav-links a,
+   .show-mobile-menu {
+     font-size: 0.8rem;
+     font-weight: bold;
+     text-decoration: none;
+     text-transform: uppercase;
+   }
+
+   .mobile-menu-check,
+   .show-mobile-menu {
+     display: none;
+   }
+
+   .header-menus li {
+     display: inline-block;
+     float: left;
+     line-height: 64px;
+     padding-left: 15px;
+   }
+ }
+
+ @media screen and (max-width: 800px) {
    .top-wrapper h1 {
      font-size: 24px;
    }
@@ -93,28 +115,5 @@
 
   nav input {
     display: none;
-  }
-}
-
-@media all and (min-width: 801px) {
-  /* MOBILE MENU */
-  .nav-links a,
-  .show-mobile-menu {
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  .mobile-menu-check,
-  .show-mobile-menu {
-    display: none;
-  }
-
-  .header-menus li {
-    display: inline-block;
-    float: left;
-    line-height: 64px;
-    padding-left: 15px;
   }
 }
