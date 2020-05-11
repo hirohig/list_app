@@ -31,7 +31,7 @@
                   <%= link_to(post.name, "/posts/#{post.id}") %>
                 </div>
                 <div class="item-menu">
-                  <%= link_to("編集", "/posts/#{post.id}/edit") %>
+                  <%= link_to("編集", "/posts/#{post.id}") %>
                   <%= link_to("削除", "/posts/#{post.id}/destroy", {method: "post"}) %>
                 </div>
               </div>
