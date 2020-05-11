@@ -1,0 +1,195 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* users/index ================================ */
+.users-heading {
+  font-weight: 300;
+  margin: 60px 0 20px;
+  font-size: 48px;
+  color: #bcc8d4;
+}
+
+.users-index-item {
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  display: table;
+  width: 100%;
+}
+
+.user-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+.user-name a {
+  font-weight: 600;
+}
+
+.user-name a:hover {
+  color: #3ecdc6;
+}
+
+.user-left {
+  float: left;
+  width: 10%;
+}
+
+.user-right {
+  width: 90%;
+  padding-left: 25px;
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* users/show ================================ */
+.user-show {
+  text-align: center;
+}
+
+.user {
+  margin-bottom: 20px;
+}
+
+.user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  margin: 20px 0 10px;
+  object-fit: cover;
+}
+
+.user p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.user a {
+  color: #8899a6;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.user span {
+  color: #afb6bf;
+  font-weight: 200;
+  padding: 0 6px 0 8px;
+}
+
+.user-tabs {
+  margin-top: 40px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.user-tabs li {
+  float: left;
+}
+
+.user-tabs li.active {
+  border-bottom: 2px solid #3ecdc6;
+}
+
+.user-tabs li.active a {
+  color: #57575f;
+}
+
+.user-tabs a {
+  display: inline-block;
+  padding: 16px 30px;
+  color: #afb6bf;
+}
+
+/* users/new, users/edit ================================ */
+.users-form input {
+  margin-bottom: 15px;
+}
+
+.user-form textarea {
+  margin-bottom: 15px;
+}
+
+/* NEW, EDIT */
+.user-form-wrapper {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #f0f4f9;
+  border-radius: 0px 0px 2px 2px;
+  padding: 32px;
+}
+
+.form-label {
+  font-size: 14px;
+  color: #8491a5;
+}
+
+.user-form-wrapper input[type="text"] {
+  width: 100%;
+  height: 40px;
+  margin: 8px 0 14px;
+  padding: 12px 16px;
+  background-color: #fcfcfd;
+  border: 1px solid #bac6d3;
+  border-radius: 2px;
+  color: #2b546a;
+  font-size: 16px;
+}
+
+.user-form-wrapper textarea[type="text"] {
+  width: 100%;
+  height: 40px;
+  margin: 8px 0 14px;
+  padding: 12px 16px;
+  background-color: #fcfcfd;
+  border: 1px solid #bac6d3;
+  border-radius: 2px;
+  color: #2b546a;
+  font-size: 16px;
+}
+
+.user-form-wrapper input[type="password"] {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background-color: #fcfcfd;
+  border: 1px solid #bac6d3;
+  border-radius: 2px;
+  color: #2b546a;
+  font-size: 12px;
+}
+
+.user-form-wrapper input[type="submit"] {
+  display: block;
+  width: 120px;
+  height: 45px;
+  margin-top: 24px;
+  margin-left: auto;
+  border-radius: 30px;
+  font-size: 14px;
+  background-color: #80bcff;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #80bcff;
+}
+
+.user-form-wrapper input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #80bcff;
+  transition: all 0.3s ease;
+}
+
+.posts-form-wrapper {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #f0f4f9;
+  border-radius: 0px 0px 2px 2px;
+  padding: 16px;
+}

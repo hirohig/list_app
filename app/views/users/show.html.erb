@@ -1,0 +1,42 @@
+<div class="main user-show">
+  <div class="user-container">
+    <div class="user-form-wrapper">
+      <% @user.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
+
+      <div class="user">
+        <h1><%= @user.name %></h1>
+        <% if @user.id == @current_user.id %>
+          <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="container-header posts-index">
+      <h2>メモ一覧</h2>
+      <span class="new-btn">
+        <%= link_to("メモ追加", "/posts/new") %>
+      </span>
+    </div>
+    <div class="posts-form-wrapper">
+        <% @posts.each do |post| %>
+            <div class="posts-index-item">
+              <div class="post-left">
+              </div>
+              <div class="post-right">
+                <div class="item-data">
+                  <%= link_to(post.name, "/posts/#{post.id}") %>
+                </div>
+                <div class="item-menu">
+                  <%= link_to("編集", "/posts/#{post.id}/edit") %>
+                  <%= link_to("削除", "/posts/#{post.id}/destroy", {method: "post"}) %>
+                </div>
+              </div>
+            </div>
+        <% end %>
+    </div>
+  </div>
+</div>

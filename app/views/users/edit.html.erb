@@ -1,0 +1,23 @@
+<div class="top-wrapper">
+  <div class="container">
+    <div class="container-header">
+      <h2>ユーザーアカウント</h2>
+    </div>
+    <div class="user-form-wrapper">
+      <% @user.errors.full_messages.each do |message| %>
+        <div class="form-error">
+          <%= message %>
+        </div>
+      <% end %>
+
+      <%= form_tag("/users/create") do %>
+        <p>ユーザー名</p>
+        <input type="text" name="name" value="<%= @user.name %>">
+        <p>パスワード</p>
+        <input type="password" name="password" value="<%= @user.password %>">
+        <input type="submit" value="変更する">
+      <% end %>
+    </div>
+    <a href="/posts/top" class="cancel-button"><span>もどる</span></a>
+  </div>
+</div>

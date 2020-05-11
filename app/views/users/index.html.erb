@@ -1,0 +1,19 @@
+<div class="main top-wrapper">
+  <div class="user-container">
+    <div class="container-header">
+      <h2>ユーザー一覧</h2>
+    </div>
+    <div class="user-form-wrapper">
+      <% @users.each do |user| %>
+        <div class="users-index-item">
+          <div class="user-left">
+          </div>
+          <div class="user-right">
+            <%= link_to(user.name, "/users/#{user.id}") %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <a href="/posts/top" class="cancel-button"><span>もどる</span></a>
+  </div>
+</div>
