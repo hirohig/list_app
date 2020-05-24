@@ -1,0 +1,60 @@
+@import "page";
+
+/* HEADER */
+.header {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid #f0f4f9;
+  height: 64px;
+  position: fixed;
+  width: 100vw;
+  z-index: 20;
+}
+
+.header-logo {
+  float: left;
+  padding-left: 30px;
+  line-height: 64px;
+}
+
+.header-logo__link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #6c7686;
+}
+
+.header-logo__link:hover {
+  color: lighten($blue, 24);
+}
+
+.header-menus {
+  float: right;
+  padding-right: 30px;
+}
+
+.header-menus__items {
+  display: inline-block;
+  float: left;
+  line-height: 64px;
+  padding-left: 20px;
+}
+
+.header-menus__items_link {
+  color: #6c7686;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header-menus__items_link:hover {
+  color: lighten($blue, 24);
+}
+
+.show-mobile-menu {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mobile-menu-check,
+.show-mobile-menu {
+  display: none;
+}

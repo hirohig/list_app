@@ -1,22 +1,22 @@
-<div class="top-wrapper">
-  <div class="user-container index-container">
-    <div class="container-header">
-      <h2>ログイン</h2>
+<div class="page-main">
+  <div class="page-content page-content_input">
+    <div class="page-content__header">
+      <h2 class="page-content__title">ログイン</h2>
     </div>
-    <div class="user-form-wrapper">
+    <div class="page-content__main">
       <% if @error_message %>
-        <div class="form-error">
+        <div class="errors">
           <%= @error_message %>
         </div>
       <% end %>
       <%= form_tag("/login") do %>
         <p>ユーザー名</p>
-        <input type="text" name="user[name]" value="<%= @name %>">
+        <input type="text" name="user[name]" value="<%= @name %>" class="page-content__input-text">
         <p>パスワード</p>
-        <input type="password" name="user[password]" value="<%= @password %>">
-        <input type="submit" value="ログイン">
+        <input type="password" name="user[password]" value="<%= @password %>" class="page-content__input-text">
+        <input type="submit" value="ログイン" class="button button_text">
       <% end %>
     </div>
-    <a href="/" class="cancel-button"><span>もどる</span></a>
+    <a href="/" class="page-content__cancel"><span>もどる</span></a>
   </div>
 </div>

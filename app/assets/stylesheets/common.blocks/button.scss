@@ -1,0 +1,28 @@
+@import "page";
+
+.button {
+  background-color: lighten($pink, 12);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  height: 45px;
+  line-height: 43px;
+  margin-left: auto;
+  outline: none;
+  text-align: center;
+  width: 120px;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.button_text {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.button_text:hover {
+  color: lighten($pink, 12);
+}

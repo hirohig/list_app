@@ -14,114 +14,19 @@
  *= require_self
  */
 
- @media screen and (min-width: 801px) {
-   .nav-links a,
-   .show-mobile-menu {
-     font-size: 0.8rem;
-     font-weight: bold;
-     text-decoration: none;
-   }
-
-   .mobile-menu-check,
-   .show-mobile-menu {
-     display: none;
-   }
-
-   .header-menus li {
-     display: inline-block;
-     float: left;
-     line-height: 64px;
-     padding-left: 15px;
-   }
-
-   .index-container {
-     width: 80%;
-     min-width: 360px;
-     max-width: 720px;
-     margin: 0 auto;
-     padding-top: 30vh;
-   }
+ .flash {
+   background: rgb(251, 170, 88);
+   border-radius: 0 0 2px 2px;
+   color: white;
+   font-size: 14px;
+   padding: 10px 0;
+   position: absolute;
+   text-align: center;
+   top: 64px;
+   width: 100%;
+   z-index: 10;
  }
 
- @media screen and (max-width: 800px) {
-   .top-wrapper h1 {
-     font-size: 24px;
-   }
-
-   .top-wrapper p {
-     font-size: 14px;
-   }
-
-   .top-wrapper {
-    padding-top: 64px;
-    text-align: center;
-   }
-
-   .btn {
-     width: 100%;
-   }
-
-   .container {
-    height: 100%;
-    max-width: 800px;
-    text-align: center;
-  }
-
-  .show-mobile-menu {
-    display: block;
-    float: right;
-    margin-top: 1.5vh;
-    padding: 0.8em 30px;
-    position: relative;
-  }
-
-  .header-menus {
-    background-color: rgba(255, 255, 255, 0.7);
-    box-sizing: border-box;
-    left: 0;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    text-align: center;
-    top: 64px;
-    transition: all 0.5s ease-in-out;
-    width: 100vw;
-    z-index: 9;
-  }
-
-  .header-menus li {
-    color: #fff;
-    display: block;
-    margin-top: 1em;
-  }
-
-  .header-menus li ~ li {
-    border: 0;
-    padding: 0;
-  }
-
-  .header-menus li:last-child {
-    margin-bottom: 1em;
-  }
-
-  /* HIDE DROPDOWN IN THE NAV MENU */
-  .mobile-menu-check:checked ~ .header-menus {
-    max-height: 1000px;
-  }
-
-  .mobile-menu-check:checked ~ .show-mobile-menu:after {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #58d2b2;
-    content: "CLOSE";
-    left: 0;
-    position: absolute;
-    top: 0.8em;
-    width: 100%;
-    text-align: center;
-  }
-
-  nav input {
-    display: none;
-  }
+.errors {
+  color: rgb(251, 170, 88);
 }

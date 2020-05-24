@@ -1,13 +1,11 @@
-<div class="top-wrapper">
-  <div class="container">
-    <h1>Shopping List</h1>
-    <div>
-      <a href="/posts/new" class="btn new-button">メモ追加</a>
-    </div>
-    <div>
-      <%= link_to("/users/#{@current_user.id}") do %>
-        <div class="btn login-button"><%= @current_user.name %></div>
-      <% end %>
-    </div>
+<div class="page-main">
+  <div class="home-content">
+    <h1 class="home-content__title">Shopping List</h1>
+    <button class="home-button home-button_new">
+      <a href="/posts/new" class="home-button__text">メモ追加</a>
+    </button>
+    <button class="home-button home-button_user-info">
+        <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}", {class: "home-button__text"}) %>
+    </button>
   </div>
 </div>

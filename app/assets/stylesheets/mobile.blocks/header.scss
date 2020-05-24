@@ -1,0 +1,62 @@
+@import "page";
+
+@media screen and (max-width: 800px) {
+  .show-mobile-menu {
+    display: block;
+    float: right;
+    margin-top: 1.5vh;
+    padding: 0.8em 30px;
+    position: relative;
+  }
+
+  .header-menus {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 64px;
+    transition: all 0.5s ease-in-out;
+    width: 100vw;
+    z-index: 9;
+  }
+
+  .header-menus__items {
+    display: block;
+    float: none;
+    margin-top: 1em;
+    padding-left: 0;
+  }
+
+  .header-menus li ~ li {
+    border: 0;
+    padding: 0;
+  }
+
+  .header-menus__items_last {
+    margin-bottom: 1em;
+  }
+
+  /* HIDE DROPDOWN IN THE NAV MENU */
+  .mobile-menu-check:checked ~ .header-menus {
+    max-height: 1000px;
+  }
+
+  .mobile-menu-check:checked ~ .show-mobile-menu:after {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: lighten($blue, 24);
+    content: "CLOSE";
+    left: 0;
+    position: absolute;
+    top: 0.8em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mobile-menu-check {
+    display: none;
+  }
+}

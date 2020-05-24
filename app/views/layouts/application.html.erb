@@ -10,31 +10,43 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header>
+  <body class="page">
+    <div class="header">
       <div class="header-logo">
         <% if @current_user %>
-          <%= link_to("List App", "/posts/top") %>
+          <%= link_to("List App", "/posts/top", {class: "header-logo__link"}) %>
         <% else %>
-          <%= link_to("List App", "/") %>
+          <%= link_to("List App", "/", {class: "header-logo__link"}) %>
         <% end %>
       </div>
-      <nav>
+      <div class="nav">
         <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
         <label for="mobile-menu" class="show-mobile-menu">Menu</label>
-        <ul class="header-menus nav-links">
+        <ul class="header-menus">
           <% if @current_user %>
-            <li><%= link_to("ユーザー一覧", "/users/index") %></li>
-            <li><%= link_to("投稿一覧", "/posts/index") %></li>
-            <li><%= link_to(@current_user.name, "/users/#{@current_user.id}") %></li>
-            <li><%= link_to("ログアウト", "/logout", {method: "post"}) %></li>
+            <li class="header-menus__items">
+              <%= link_to("ユーザー一覧", "/users/index", {class: "header-menus__items_link"}) %>
+            </li>
+            <li class="header-menus__items">
+              <%= link_to("投稿一覧", "/posts/index", {class: "header-menus__items_link"}) %>
+            </li>
+            <li class="header-menus__items">
+              <%= link_to(@current_user.name, "/users/#{@current_user.id}", {class: "header-menus__items_link"}) %>
+            </li>
+            <li class="header-menus__items">
+              <%= link_to("ログアウト", "/logout", {method: "post", class: "header-menus__items_link header-menus__items_last"}) %>
+            </li>
           <% else %>
-            <li><%= link_to("新規登録", "/signup") %></li>
-            <li><%= link_to("ログイン", "/login") %></li>
+            <li class="header-menus__items">
+              <%= link_to("新規登録", "/signup", {class: "header-menus__items_link"}) %>
+            </li>
+            <li class="header-menus__items">
+              <%= link_to("ログイン", "/login", {class: "header-menus__items_link header-menus__items_last"}) %>
+            </li>
           <% end %>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </div>
 
     <% if flash[:notice] %>
       <div class="flash">

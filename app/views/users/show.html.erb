@@ -1,42 +1,38 @@
-<div class="main user-show">
-  <div class="user-container">
-    <div class="user-form-wrapper">
+<div class="page-main">
+  <div class="page-content">
+    <div class="page-content__main user-content">
       <% @user.errors.full_messages.each do |message| %>
-        <div class="form-error">
+        <div class="errors">
           <%= message %>
         </div>
       <% end %>
-
-      <div class="user">
-        <h1><%= @user.name %></h1>
-        <% if @user.id == @current_user.id %>
-          <%= link_to("編集", "/users/#{@user.id}/edit") %>
-        <% end %>
-      </div>
+      
+      <h1><%= @user.name %></h1>
+      <% if @user.id == @current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit", {class: "user-content__edit-link"}) %>
+      <% end %>
     </div>
 
-    <div class="container-header posts-index">
-      <h2>メモ一覧</h2>
-      <span class="new-btn">
-        <%= link_to("メモ追加", "/posts/new") %>
+    <div class="page-content__header">
+      <h2 class="page-content__title">メモ一覧</h2>
+      <span class="button">
+        <%= link_to("メモ追加", "/posts/new", {class: "button_text"}) %>
       </span>
     </div>
-    <div class="posts-form-wrapper">
-        <% @posts.each do |post| %>
-            <div class="posts-index-item">
-              <div class="post-left">
+    <div class="page-content__main">
+      <% @posts.each do |post| %>
+          <div class="posts-index">
+            <div class="posts-index__items">
+              <div class="posts-content">
+                <%= link_to(post.name, "/posts/#{post.id}") %>
               </div>
-              <div class="post-right">
-                <div class="item-data">
-                  <%= link_to(post.name, "/posts/#{post.id}") %>
-                </div>
-                <div class="item-menu">
-                  <%= link_to("編集", "/posts/#{post.id}") %>
-                  <%= link_to("削除", "/posts/#{post.id}/destroy", {method: "post"}) %>
-                </div>
+              <div class="posts-menu">
+                <%= link_to("編集", "/posts/#{post.id}", {class: "posts-menu__link"}) %>
+                <%= link_to("削除", "/posts/#{post.id}/destroy", {method: "post", class: "posts-menu__link"}) %>
               </div>
             </div>
-        <% end %>
+          </div>
+      <% end %>
     </div>
   </div>
 </div>
