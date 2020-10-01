@@ -15,7 +15,7 @@
  */
 
  .flash {
-   background: rgb(251, 170, 88);
+   background: rgb(29, 161, 242);
    border-radius: 0 0 2px 2px;
    color: white;
    font-size: 14px;
@@ -28,5 +28,5 @@
  }
 
 .errors {
-  color: rgb(251, 170, 88);
+  color: rgb(29, 161, 242);
 }

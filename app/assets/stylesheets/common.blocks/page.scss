@@ -1,10 +1,12 @@
-$blue: #0ac4ff;
+$blue: rgb(29, 161, 242);
+$skyblue: rgb(113, 201, 248);
+
 $pink: #fd6eb6;
 $green: #52ff00;
 $yellow: #ffd700;
 
 .page {
-  background-color: lighten($blue, 24);
+  background-color: $fff;
 }
 
 .page-main {
@@ -23,7 +25,7 @@ $yellow: #ffd700;
 }
 
 .page-content__cancel {
-  color: rgba(255, 255, 255, 0.9);
+  color: $skyblue;
   float: left;
   font-size: 20px;
   font-weight: 600;

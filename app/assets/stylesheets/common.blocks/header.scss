@@ -2,8 +2,7 @@
 
 /* HEADER */
 .header {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid #f0f4f9;
+  background-color: $skyblue;
   height: 64px;
   position: fixed;
   width: 100vw;
@@ -18,12 +17,12 @@
 
 .header-logo__link {
   font-size: 20px;
-  font-weight: 500;
-  color: #6c7686;
+  font-weight: 700;
+  color: #fff;
 }
 
 .header-logo__link:hover {
-  color: lighten($blue, 24);
+  color: $blue;
 }
 
 .header-menus {
@@ -39,13 +38,13 @@
 }
 
 .header-menus__items_link {
-  color: #6c7686;
-  font-size: 16px;
-  font-weight: 500;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .header-menus__items_link:hover {
-  color: lighten($blue, 24);
+  color: $blue;
 }
 
 .show-mobile-menu {

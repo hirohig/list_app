@@ -17,7 +17,7 @@
 }
 
 .home-button {
-  border: none;
+  border: solid 1px $blue;
   border-radius: 10px;
   display: block;
   margin: 25px auto;
@@ -25,25 +25,36 @@
   width: 20vw;
 }
 
-.home-button__text {
+ .home-button_signup .home-button__text {
   color: #fff;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
 }
 
-.home-button__text:hover {
-  color: lighten($blue, 24);
+.home-button_login .home-button__text {
+ color: $blue;
+ font-size: 24px;
+ font-weight: bold;
+ text-decoration: none;
+}
+
+.home-button_login .home-button__text:hover {
+  color: $blue;
+}
+
+.home-button_signup .home-button__text:hover {
+  color: #fff;
 }
 
 .home-button_login,
 .home-button_user-info {
-  background-color: lighten($green, 12);
+  background-color: $blue;
 }
 
 .home-button_signup,
 .home-button_new {
-  background-color: lighten($yellow, 12);
+  background-color: #fff;
 }
 
 .home-button_login:hover,
@@ -54,6 +65,6 @@
 
 .home-button_signup:hover,
 .home-button_new:hover {
-  background-color: #fff;
+  background-color: $blue;
   transition: all 0.3s ease;
 }
