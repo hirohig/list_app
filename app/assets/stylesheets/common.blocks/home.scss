@@ -9,7 +9,7 @@
 }
 
 .home-content__title {
-  color: rgba(255, 255, 255, 0.8);
+  color: $skyblue;
   font-size: 54px;
   font-weight: bold;
   letter-spacing: 5px;
@@ -26,14 +26,14 @@
 }
 
  .home-button_signup .home-button__text {
-  color: #fff;
+  color: $blue;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
 }
 
 .home-button_login .home-button__text {
- color: $blue;
+ color: #fff;
  font-size: 24px;
  font-weight: bold;
  text-decoration: none;
